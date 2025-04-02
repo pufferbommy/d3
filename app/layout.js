@@ -4,7 +4,9 @@ import Navbar from "./components/navbar";
 import { Toaster } from "react-hot-toast";
 import ConfigContextProvider from "./components/config-context-provider";
 
-const notoSansThai = Noto_Sans_Thai()
+const notoSansThai = Noto_Sans_Thai({
+  subsets: ['thai']
+})
 
 export const metadata = {
   title: "Drone App",
