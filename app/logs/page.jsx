@@ -81,8 +81,8 @@ export default function LogsPage() {
                     className="hover:bg-gray-50 transition-colors"
                   >
                     <td className="px-6 py-4 font-mono text-sm">{log.drone_id}</td>
-                    <td className="px-6 py-4">{log.drone_name || '—'}</td>
-                    <td className="px-6 py-4">{log.country || '—'}</td>
+                    <td className="px-6 py-4">{process.env.NEXT_PUBLIC_CUSTOM_DRONE_NAME || log.drone_name || '—'}</td>
+                    <td className="px-6 py-4">{process.env.NEXT_PUBLIC_CUSTOM_DRONE_COUNTRY || log.country || '—'}</td>
                     <td className="px-6 py-4">
                       {log.celsius !== undefined ? (
                         <span>

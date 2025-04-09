@@ -52,7 +52,7 @@ export default function Page() {
                     <Loader2 className="w-3 h-3 animate-spin mr-2" />
                     Loading...
                   </div>
-                ) : config.drone_name}
+                ) : (process.env.NEXT_PUBLIC_CUSTOM_DRONE_NAME || config.drone_name) } 
               </div>
             </div>
           </li>
@@ -86,7 +86,7 @@ export default function Page() {
                     <Loader2 className="w-3 h-3 animate-spin mr-2" />
                     Loading...
                   </div>
-                ) : config.country}
+                ) : (process.env.NEXT_PUBLIC_CUSTOM_DRONE_COUNTRY || config.country)}
               </div>
             </div>
           </li>

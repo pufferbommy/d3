@@ -90,9 +90,9 @@ export default function Page() {
               <div className="text-gray-500">Drone ID:</div>
               <div className="font-mono">{config?.drone_id || '—'}</div>
               <div className="text-gray-500">Drone Name:</div>
-              <div>{config?.drone_name || '—'}</div>
+              <div>{process.env.NEXT_PUBLIC_CUSTOM_DRONE_NAME || config?.drone_name || '—'}</div>
               <div className="text-gray-500">Country:</div>
-              <div>{config?.country || '—'}</div>
+              <div>{process.env.NEXT_PUBLIC_CUSTOM_DRONE_COUNTRY || config?.country || '—'}</div>
             </div>
           )}
         </div>
